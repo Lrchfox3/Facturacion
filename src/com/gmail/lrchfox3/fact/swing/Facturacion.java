@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.gmail.lrchfox3.frames;
+package com.gmail.lrchfox3.fact.swing;
 
 /**
  *

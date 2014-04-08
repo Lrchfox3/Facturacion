@@ -4,18 +4,28 @@
  * and open the template in the editor.
  */
 
-package com.gmail.lrchfox3.frames;
+package com.gmail.lrchfox3.fact.swing;
+
+import com.gmail.lrchfox3.utilitarios.Utileria;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author lchinchilla
  */
-public class Producto extends javax.swing.JInternalFrame {
+public class Board extends javax.swing.JFrame {
 
     /**
-     * Creates new form Inventario
+     * Creates new form Board
      */
-    public Producto() {
+    public Board() {
+        
+        try {
+            Utileria.lookAndFeelSystem(); //"Nimbus"
+        } catch (Exception ex) {
+            Logger.getLogger(Board.class.getName()).log(Level.SEVERE, null, ex);
+        }
         initComponents();
     }
 
@@ -28,24 +38,19 @@ public class Producto extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanelBase1 = new com.gmail.lrchfox3.controles.paneles.JPanelBase();
-        jPanelBase2 = new com.gmail.lrchfox3.controles.paneles.JPanelBase();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setExtendedState(6);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
-        jTabbedPane1.addTab("tab1", jPanelBase1);
-        jTabbedPane1.addTab("tab2", jPanelBase2);
-
-        getContentPane().add(jTabbedPane1);
+        jDesktopPane1.setBackground(java.awt.SystemColor.window);
+        getContentPane().add(jDesktopPane1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.gmail.lrchfox3.controles.paneles.JPanelBase jPanelBase1;
-    private com.gmail.lrchfox3.controles.paneles.JPanelBase jPanelBase2;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JDesktopPane jDesktopPane1;
     // End of variables declaration//GEN-END:variables
 }
